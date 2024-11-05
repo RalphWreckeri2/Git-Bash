@@ -5,22 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World</title>
     <style>
-        /* Optional CSS to style the header and footer */
-        header {
-            background-color: #4CAF50; /* Green background */
-            color: white;              /* White text */
-            padding: 10px;            /* Some padding */
-            text-align: center;        /* Centered text */
+        /* Basic reset for consistent styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+        
+        /* Styling for the entire page */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Main content area styling */
+        main {
+            flex: 1;
+            padding: 20px;
+            background-color: #f4f4f9;
+            text-align: center;
+        }
+
+        /* Styling for sections in main content */
+        section {
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        /* Styling for footer */
         footer {
-            background-color: #333;    /* Dark background */
-            color: white;              /* White text */
-            text-align: center;        /* Centered text */
-            padding: 10px;            /* Some padding */
-            position: absolute;        /* Positioning */
-            left: 0;
-            bottom: 0;
-            width: 100%;               /* Full width */
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Additional styles for text */
+        h1, h2 {
+            color: #333;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        /* Styling for the contact form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -30,8 +98,38 @@
     </header>
 
     <main>
-        <h1>Hello, World!</h1>
-        <h1>Hello, World!</h1>
+        <section id="introduction">
+            <h2>Hello, World!</h2>
+            <p>This is a simple text file demonstrating basic HTML structure and content.</p>  
+            <p>"You have no authority here" - Just a fun phrase to add some personality.</p>
+        </section>
+
+        <section id="about-us">
+            <h2>About Us</h2>
+            <p>We are a team of passionate individuals committed to bringing you the best content and services. Our mission is to deliver high-quality, informative, and engaging experiences for all our users.</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Content Creation</li>
+                <li>Web Development</li>
+                <li>Digital Marketing</li>
+                <li>Consulting</li>
+            </ul>
+            <p>We offer a range of services tailored to meet your needs. Contact us to learn how we can help you achieve your goals.</p>
+        </section>
+
+        <section id="contact-us">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or want to get in touch, please fill out the form below:</p>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
     </main>
 
     <footer>
